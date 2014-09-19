@@ -23,7 +23,7 @@ public class Dictionary {
     Random index = new Random();
     String[] RowData;
     String separator = ",";
-    List<Word> csvDict=new LinkedList<Word>();
+    List<Word> csvDict = new LinkedList<Word>();
 
     public Dictionary() {
     }
@@ -47,9 +47,9 @@ public class Dictionary {
         csvDict.get(index).setSuccess(csvDict.get(index).getSuccess() + 1);
     }
 
-    public List<Word> initCsvDict() throws IOException {
+    public List<Word> initCsvDict(Context ctx) throws IOException {
         FileOperations fileOperations = new FileOperations();
-        csvDict = fileOperations.readFile("dictionary.csv");
+        csvDict = fileOperations.readFile("dictionary.csv", ctx);
         return csvDict;
     }
 

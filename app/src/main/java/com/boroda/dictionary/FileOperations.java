@@ -63,9 +63,9 @@ public class FileOperations {
     }
 
 
-    List<Word> readFile(final String name) {
-        Context ctx = null;
-        ctx.getApplicationContext();
+    List<Word> readFile(final String name, Context ctx) {
+
+        ctx = ctx.getApplicationContext();
         try {
             InputStreamReader isr = new InputStreamReader(ctx.openFileInput(name));
             BufferedReader reader = new BufferedReader(isr);

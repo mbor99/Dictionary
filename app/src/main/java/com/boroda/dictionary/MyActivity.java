@@ -38,18 +38,10 @@ public class MyActivity extends Activity implements View.OnClickListener {
         setContentView(R.layout.activity_my);
 
         try {
-            dict = d.initCsvDict();
+            dict = d.initCsvDict(getApplicationContext());
         } catch (IOException e) {
             e.printStackTrace();
         }
-//        f.save("firstfile", context=getApplicationContext());
-//        f.writeFile(getApplicationContext());
-//        context=getApplicationContext();
-//        File ff = context.getFilesDir();
-//        String ss = ff.getAbsolutePath();
-//        File r= ff.listFiles()[0];
-//        String g = f.read("file");
-//        System.out.println(g);
 
 
 
